@@ -227,6 +227,13 @@ document.addEventListener('DOMContentLoaded', async (e) => {
 
     const startSlideShow = () => {
         slideInterval = setInterval(() => {
+            let runningSlide = track.querySelector('.current-slide');
+            let runningDot = dotsNav.querySelector('.current-slide');
+            
+            if(runningSlide !== currentSlide || runningDot !== currentDot){
+                currentSlide = runningSlide;
+                currentDot = runningDot;
+            }
             let nextSlide = currentSlide.nextElementSibling;
             let nextDot = currentDot.nextElementSibling;
 
