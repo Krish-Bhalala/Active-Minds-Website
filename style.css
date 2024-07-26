@@ -1,0 +1,131 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.carousel{
+    position: absolute;
+    height:100vh;
+    width: 100%;
+    overflow: hidden;
+  
+}
+.carousel__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1
+    
+}
+.carousel__track-container{
+    position: relative;
+    overflow: hidden;
+    background-color:lightgreen ;
+    height: 100%;    
+
+}
+.carousel__track{
+    list-style: none;
+   padding: 0;
+   margin: 0;
+   position:relative;
+    height: 100%;
+    transition: transform 0.3s ease-in;
+}
+.carousel__slide{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    width: 100%;
+}
+.carousel__button{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: transparent;
+    border:0;
+    cursor: pointer;
+    z-index: 1;
+    color: black;
+
+}
+.carousel__button img {
+    height: 4rem;
+    width: 4rem;
+    filter: brightness(0.8); /* Adjust these values to get the desired dull black color */
+}
+
+.carousel__button--left{
+    left: 2em;
+    fill: currentColor;
+
+}
+.carousel__button--right{
+    right: 2em;
+    fill: currentColor;
+
+}
+.carousel__nav{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    bottom: 2.45rem;
+    padding: 10px 0;
+    z-index: 1;
+}
+.carousel__indicator{
+    border: 0;
+    width: 30px;
+    height: 4px;
+
+    background: rgba(255,255,255,0.5);    
+ 
+    margin: auto 12px;
+    cursor: pointer;
+}
+.carousel__indicator.current-slide{
+    background: rgba(0,0,0,0.7);
+}
+.is-hidden{
+    display: none;
+}
+.carousel__button img:hover{
+    filter:brightness(1.5);
+}
+
+.carousel__text{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    z-index: 10;
+    position: relative;
+    bottom: 15rem;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background: rgba(0,0,0,0.5);
+    filter: drop-shadow(2px 2px 2px black);
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+.carousel__text h2{
+    padding: 10px;
+    font-size: 2rem;
+}
+.carousel__text p{
+    padding: 10px;
+    font-size: 1.5rem;
+    
+}
