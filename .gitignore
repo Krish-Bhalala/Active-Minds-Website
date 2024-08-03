@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Package lock file
+package-lock.json
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+
+# IDE and editor folders
+.idea/
+.vscode/
